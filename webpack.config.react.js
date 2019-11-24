@@ -4,7 +4,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     mode: "development",
     entry: {
-        // test: './src/test.js',
         react: ['react', 'react-dom']
     },
     output: {

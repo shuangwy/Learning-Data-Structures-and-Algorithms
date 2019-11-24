@@ -4,17 +4,39 @@ let webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
-    entry: './src/index.js',
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                common: {
+                    chunks: 'initial',
+                    minSize: 0,
+                    minChunks: 2,//引用两次就抽离到公共部分
+                },
+                vendor: { //抽离第三方的文件
+                    priority: 1, //增加权重
+                    test: /node_modules/,
+                    chunks: 'initial',
+                    minSize: 0,
+                    minChunks: 2
+
+                }
+            }
+
+        }
+    },
+    mode: 'production',
+    entry: {
+        index: './src/index.js',
+        other: './src/other.js'
+    },
     output: {
         filename: "[name].js",
         path: path.resolve(__dirname, 'dist')
     },
     devServer: {
-        // hot: true,
         port: 3000,
-        contentBase: './dist',
-        open: 'Google Chrome',
+        open: true,
+        contentBase: './dist'
     },
     plugins: [
         new CleanWebpackPlugin(),
@@ -24,10 +46,7 @@ module.exports = {
         new htmlWebpackPlugin({
             template: './public/index.html'
         }),
-        // new webpack.IgnorePlugin(/\.\/locale/, /moment/),
-        new webpack.NamedModulesPlugin(),//打印更新的模块路径
-        // new webpack.HotModuleReplacementPlugin(), //热更新插件
-        // new web
+        new webpack.IgnorePlugin(/\.\/locale/, /moment/),
     ],
     module: {
         noParse: /jquery/,
