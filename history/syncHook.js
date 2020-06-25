@@ -11,10 +11,10 @@ class SyncHook {
     }
 }
 let hook = new SyncHook(['name'])
-hook.tap('react', () => {
-    console.log(222, 'react')
+hook.tap('react', (name) => {
+    console.log(222, name)
 })
-hook.tap('node', () => {
-    console.log(222, 'node')
+hook.tap('node', (name) => {
+    console.log(name, 'node')
 })
 hook.call('ws')
