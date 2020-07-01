@@ -1,0 +1,18 @@
+const set = new Set()
+set.add(10)
+// set.add(11)
+set.add([12,13,14])
+set.add(11)
+// const or = set.entries()
+console.log(1111, set.values())
+// console.log(1111, or.next().value)
+// console.log(1111, or.next().value)
+// console.log(1111, or.next().value)
+// const 
+// console.log(2222,[...new Set([1,2,3,4,5,6,3,2,1,2])])
+const a = new Set([1,2,3,4])
+const b = new Set([2,3,4,5,6])
+const c = new Set([...a].filter(ele=>b.has(ele)))
+const d = new Set([...a].filter(ele=> !b.has(ele)))
+
+console.log(4444, c,d)
