@@ -33,7 +33,7 @@ let hook = new AsyncSeriesWaterfallHook(['name'])
 hook.tapPromise('react', name => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log(name, '111')
+            // console.log(name, '111')
             resolve('niam')
         }, 1000)
     })
@@ -42,7 +42,7 @@ hook.tapPromise('react', name => {
 hook.tapPromise('node', name => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log(name, '2222')
+            // console.log(name, '2222')
             resolve()
         }, 1000)
     })
@@ -50,6 +50,6 @@ hook.tapPromise('node', name => {
 
 hook.promise('ws').then(() => {
     setTimeout(() => {
-        console.log('end-----end')
+        // console.log('end-----end')
     }, 1000)
 })

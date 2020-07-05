@@ -68,10 +68,8 @@ class LinkedList {
     indexOf(element) {
         let index = 0,
             current = this.head
-            console.log('current',current.element)
         while (current) {
             if (current.element === element) {
-                console.log(777)
                 return index
             }
             index++;
@@ -97,3 +95,4 @@ link.append(4)
 link.append(8)
 link.remove(3)
 // console.log(33333, link.getHead())
+export default LinkedList

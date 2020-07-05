@@ -3,6 +3,7 @@ require('./queue')
 require('./linkedList')
 require('./setOption')
 require('./set')
+require('./hashTable')
 //异步串行瀑布钩子
 
 // let { AsyncSeriesWaterfallHook } = require('tapable')

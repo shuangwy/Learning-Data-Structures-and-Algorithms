@@ -1,4 +1,3 @@
-console.log('caoniam')
 class Queue {
     constructor(){
         this.items=[]
