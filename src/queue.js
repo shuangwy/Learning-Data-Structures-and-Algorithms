@@ -12,7 +12,6 @@ class Queue {
         return this.items[0]
     }
     isEmpty(){
-        console.log('isEmpty', this)
         return this.items.length === 0
     }
     size(){
@@ -71,9 +70,9 @@ class PriorityQueue{
     }
 }
 
-const queue = new PriorityQueue()
-queue.enqueue('er',12)
-queue.enqueue('wang',10)
+// const queue = new PriorityQueue()
+// queue.enqueue('er',12)
+// queue.enqueue('wang',10)
 // console.log(44444,queue.getItem())
-
+export default  Queue
 

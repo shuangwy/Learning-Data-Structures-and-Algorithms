@@ -105,9 +105,15 @@ tree.insert(4)
 tree.insert(10)
 tree.insert(2)
 tree.insert(5)
+tree.insert(1)
+tree.insert(6)
+tree.insert(18)
 let items = []
 // const call = (item) => {
 //     items.push(item)
 // }
 // tree.traverse(call)
-console.log(9999, tree.remove(5), tree.getRoot())
+tree.remove(9)
+
+// console.log(9999, tree.getRoot())
+// console.log(9999, tree.getRoot())

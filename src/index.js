@@ -6,6 +6,7 @@ require('./set')
 require('./hashTable')
 require('./hashTableX')
 require('./tree')
+require('./graph')
 
 //异步串行瀑布钩子
 
